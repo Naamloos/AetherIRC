@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AetherIRC.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AetherIRC
+namespace AetherIRC.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +24,17 @@ namespace AetherIRC
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Connect(object sender, RoutedEventArgs e)
+        {
+            var cvm = new ChatViewModel();
+            var cv = new ChatView();
+
+            cv.DataContext = cvm;
+            cv.Show();
+
+            Close();
         }
     }
 }

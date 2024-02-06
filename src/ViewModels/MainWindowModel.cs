@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AetherIRC
+namespace AetherIRC.ViewModels
 {
     public class MainWindowModel : INotifyPropertyChanged
     {
@@ -27,7 +27,6 @@ namespace AetherIRC
         {
             Servers.Add("Libera");
             Servers.Add("FreeNode");
-            OnPropertyChanged();
         }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AetherIRC.ViewModels;
+using AetherIRC.Views;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
